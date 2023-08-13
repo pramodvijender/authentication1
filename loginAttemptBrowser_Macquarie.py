@@ -26,7 +26,7 @@ time.sleep(10)
 response = password_field.send_keys(Keys.RETURN)
 
 try:
-    returntext = driver.find_element(By.XPATH, "//*[contains(@class, 'ng-star-inserterd')]").text
+    returntext = driver.find_element(By.XPATH, "//*[contains(@class, 'mq-mfa-validate')]").text
 # Wait for the login process to complete
     print(returntext)
 except:
@@ -34,7 +34,7 @@ except:
     if returntext == "Something went wrong":
         print("This was picked up by botman")
     else:
-        print(returntext)
+        print(returntext+ "This has not pickedup")
 #viewport_content = driver.execute_script('return document.querySelector("meta[name=viewport]").getAttribute("content")')
 #viewport_content = driver.execute_script('return document.querySelector("meta[name=viewport]").getAttribute(
 #print(viewport_content)

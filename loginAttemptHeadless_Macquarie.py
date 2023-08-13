@@ -14,14 +14,15 @@ from selenium.webdriver.support import expected_conditions as EC
 # Create a new instance of the Chrome driver
 # make this a headless Browser
 
-driver = webdriver.Chrome()
+
 
 # Open the website login page
 chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--headless')
+chrome_options.add_argument("--headless=new")
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--enable-javascript')
+
 
 with open('/Users/pramodvijender/PycharmProjects/authentication/usernames') as myfile:
     for line in myfile.readlines():
